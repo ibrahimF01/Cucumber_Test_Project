@@ -1,0 +1,89 @@
+Product Owner -> Birimler Müdürü
+
+ATM birimi
+Takım Lideri
+Business analist (İş analist) analist
+(Müşteriyle-Developer)
+Developerlar
+Testerlar
+
+Proje gelir
+İş analisti -> developer anlatır
+Developer başlar.
+  -> Developer
+  önce kendine bir test yazar(Unit test)
+  Sonra kodunu yazmaya başlar
+  kod bitince başlangıçta hata veren test
+  sonra doğru sonuç verir.
+
+Test Driven Development -> TDD denir.
+
+Planlama                      Planlama
+Tasarım                       Tasarım
+Geliştirme                    Test-Web Tester -> Senaryolar oluşturalacak
+Test-> web tester             Geliştirme
+Teslim                        Teslim
+
+İş analistyle & Tester neyi sağlıyor ?
+Behavior Driven Development  -> BDD
+
+Önce Siteye git -> adım
+Sonra Login kontrolünü yap -> adım
+Sonra Girdiğini doğrula -> adım
+
+   AGILE metodolojisi -> Müşteri odaklı ve her yapılan işlemi
+gösterilebilecek hale geldiğinde müşteriye göstererek ilerleme.
+
+“ Agile methodolojisi ile iş yapıyorsanız ve uygulama testi için
+BDD kullanmıyorsanız kendinizle çelişiyorsunuzdur. ”
+
+
+Bize bu şekilde senaryo yazma imkanı veren TOOL CUCUMBER dır.
+
+-------------------------------------------------------------
+https://www.jetbrains.com/help/idea/maven-support.html#create_new_maven_project
+https://www.jetbrains.com/help/idea/cucumber-support.html
+
+Maven
+1- Yeni projeye tıklattım-> Proje Tipi olarak MAVEN
+   seçildi.satnadart sonlandırıldı.
+
+2- Klasör yapısını inceledik:
+   main -> Developer ın source kodları
+   test -> Testerın kodları
+
+3- Mavenın verdiği düzenli yapının kendi tarafımızda ,
+   bizde kendi düzenli klasör yapımızı oluşturacağız.
+   Klasörler
+
+   FeatureFiles   -> Senaryolarımızın olduğu klasör
+   StepDefinitions-> Senaryoların çalışan adımları - metodları burada olacak
+   Pages          -> Page Object Modell sayfalarımız POM (@FindBy)
+   Utilities      -> Driver ve diğer tekrar kullanılacak metodlarımız
+   Runners        -> Çalıştırıcılar
+
+
+3- Ayarlar
+   A) Intellij Editör ayarları
+      2 tane Plugin ekleyeceğiz
+        1- Cucumber for Java
+        2- Gherkin Language
+
+https://cucumber.io/docs/gherkin/reference/#keywords
+           Feature
+           Scenario
+           Given-When-Then-And
+
+           Examples follow this same pattern:
+           Describe an initial context (Given steps)
+           Describe an event (When steps)
+           Describe an expected outcome (Then steps)
+
+   B) POM.xml -> Project Object Model Ayarları
+
+      Selenium
+      Cucumber
+      testNG
+      Cucumber-testNG birleştiren lib
+      Webdriver   WebDriverManager  //5.1.0
+      Properties de ByteCode version(1.8) ayarı.
